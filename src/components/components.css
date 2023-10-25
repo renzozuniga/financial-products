@@ -1,0 +1,334 @@
+/* -----------------------------------------------------
+	Loading Spinner
+-------------------------------------------------------- */
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #fade4b;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+/* -----------------------------------------------------
+	Input
+-------------------------------------------------------- */
+
+.input-container.sm {
+    width: 27.33%;
+    margin: 40px 1%;
+    position: relative;
+}
+
+.input-container.lg {
+    width: 100%;
+    margin: 40px 0%;
+    position: relative;
+}
+
+.input-component.primary:disabled {
+    background-color: var(--primary-light);
+}
+
+.input-component.success~.focus-border:before,
+.input-component.success~.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--feedback-success);
+    transition: 0.3s;
+}
+
+.input-component.error~.focus-border:before,
+.input-component.error~.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--feedback-error);
+    transition: 0.3s;
+}
+
+.input-component~.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.input-component.success~.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.input-component.error~.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+
+
+.input-component.success~.focus-border i:before,
+.input-component.success~.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: var(--feedback-success);
+    transition: 0.4s;
+}
+
+.input-component.error~.focus-border i:before,
+.input-component.error~.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: var(--feedback-error);
+    transition: 0.4s;
+}
+
+.input-component~.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.input-component.success~.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.input-component.error~.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.input-component:focus~.focus-border:before,
+.input-component:focus~.focus-border:after {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.input-component:focus~.focus-border i:before,
+.input-component:focus~.focus-border i:after {
+    height: 100%;
+    transition: 0.4s;
+}
+
+.input-container>label {
+    position: absolute;
+}
+
+.input-component~label,
+.has-content.input-component~label {
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    color: var(--primary-dark);
+    transition: 0.3s;
+}
+
+/* -----------------------------------------------------
+	Flex
+-------------------------------------------------------- */
+.flex-parent {
+    margin: 100px 0 0px 0px;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.flex-item {
+    display: flex;
+    padding: 0 50px;
+}
+
+/* -----------------------------------------------------
+	Button
+-------------------------------------------------------- */
+
+.ka-button {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.ka-button.alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ka-button.primary {
+    background: var(--primary);
+    color: var(--primary-dark);
+    border: none;
+
+}
+
+.ka-button.primary:hover {
+    background-color: var(--primary);
+    border-color: var(--auxiliary-black);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--auxiliary-black);
+    cursor: pointer;
+}
+
+.ka-button.primary:disabled {
+    background-color: var(--primary-lightest);
+    color: var(--primary-white-normal);
+    border-color: var(--primary-lightest);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--primary-lightest);
+}
+
+.ka-button.secondary {
+    background: var(--secondary);
+    color: var(--secondary-dark);
+    border: var(--secondary);
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.ka-button.secondary:hover {
+    background-color: var(--secondary-white-normal);
+    color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--secondary-dark);
+    cursor: pointer;
+}
+
+.ka-button.secondary:disabled {
+    background-color: var(--secondary-white-normal);
+    color: var(--secondary-lightest);
+    border-color: var(--secondary-lightest);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--secondary-lightest);
+}
+
+
+/* -----------------------------------------------------
+	Alert
+-------------------------------------------------------- */
+.ka-alert {
+    position: relative;
+    top: 10;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.8;
+    border-radius: 5px;
+    cursor: hand;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.ka-alert.open {
+    visibility: visible;
+}
+
+.ka-alert.close {
+    visibility: hidden;
+}
+
+.alert-checkbox {
+    display: none;
+}
+
+:checked+.ka-alert {
+    display: none;
+}
+
+.aler-text {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.alert-close {
+    float: right;
+    padding-top: 5px;
+    font-size: 15px;
+    background: transparent;
+    border: none;
+}
+
+.alert-close:hover {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}
+
+.ka-alert.success {
+    background-color: var(--feedback-success-light);
+    border: 1px solid var(--feedback-success);
+    color: var(--feedback-success);
+}
+
+.ka-alert.error {
+    background-color: var(--feedback-error-light);
+    border: 1px solid var(--feedback-error);
+    color: var(--feedback-error);
+}
+
+.ka-alert.warning {
+    background-color: var(--feedback-warning-light);
+    border: 1px solid var(--feedback-warning);
+    color: var(--feedback-warning);
+}
+
+.ka-alert.informative {
+    background-color: var(--feedback-informative-light);
+    border: 1px solid var(--feedback-informative);
+    color: var(--feedback-informative);
+}

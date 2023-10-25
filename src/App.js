@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Products } from "./pages/Products/Products";
+import { AddProduct } from "./pages/Products/AddProduct";
+import { EditProduct } from "./pages/Products/EditProduct";
+import { DeleteProduct } from "./pages/Products/DeleteProduct";
+import ProductContextProvider from "./contexts/ProductContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProductContextProvider>
+              <Products />
+            </ProductContextProvider>
+          }
+        ></Route>
+        <Route
+          path="/add-product"
+          element={
+            <ProductContextProvider>
+              <AddProduct />
+            </ProductContextProvider>
+          }
+        ></Route>
+        <Route
+          path="/edit-product"
+          element={
+            <ProductContextProvider>
+              <EditProduct />
+            </ProductContextProvider>
+          }
+        ></Route>
+        <Route
+          path="/delete-product"
+          element={
+            <ProductContextProvider>
+              <DeleteProduct />
+            </ProductContextProvider>
+          }
+        ></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

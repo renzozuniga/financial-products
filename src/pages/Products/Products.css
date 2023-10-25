@@ -1,0 +1,344 @@
+/* -----------------------------------------------------
+	Body
+-------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  background-color: #F8F8F8;
+}
+
+*, *::after, *::before {
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffa000;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------------
+	Main
+-------------------------------------------------------- */
+main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f4f6f9;
+}
+main .main-content {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+main .add-content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+main .delete-content {
+    width: 700px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* -----------------------------------------------------
+	Flex
+-------------------------------------------------------- */
+.custom-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -----------------------------------------------------
+	Header
+-------------------------------------------------------- */
+header {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  background-color: #FFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    position: relative;
+    z-index: 1;
+}
+
+header h2 {
+  margin: 0;
+  padding: 25px 0;
+  color: #646360;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* -----------------------------------------------------
+	List
+-------------------------------------------------------- */
+.custom-list {
+    width: 100%;
+    background-color: white;
+    padding: 35px;
+    margin: 50px 0;
+}
+
+.custom-logo {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+/* -----------------------------------------------------
+	Table
+-------------------------------------------------------- */
+.custom-table {
+    color: #333;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 40px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.16);
+    border-radius: 2px;
+}
+
+th:first-child {
+    width: 260px;
+}
+
+th:nth-child(3) {
+    width: 300px;
+}
+
+th:not(:first-child) {
+    text-align: left;
+}
+
+th {
+    background: #f4f6f9;
+    color: #67686b;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+tr:hover:not(th) {background-color: #f4f6f9;}
+
+td:first-child {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* -----------------------------------------------------
+	Input
+-------------------------------------------------------- */
+.input-group {
+    color: #333;
+    float: left;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    width: 300px;
+}
+
+input {
+    background: #fff;
+    border-radius: 5px;
+    float: left;
+    font-size: 13px;
+    height: 33px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    width: 100%;
+}
+
+input.yes-error {
+    border: 1px solid red;
+}
+
+input.no-error {
+    border: 1px solid #999;
+}
+  
+input:focus {
+    outline: none !important;
+    border:1px solid gray;
+    box-shadow: 0 0 10px #646360;
+}
+
+/* -----------------------------------------------------
+	Button
+-------------------------------------------------------- */  
+.button-add {
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 0 100px;
+    padding: 20px 50px;
+    background-color: #fade4b;
+    border: none;
+    border-radius:5px;
+}
+
+.button-add:hover{
+    background-color: #f3ce16ef;
+    border:1px solid gray;
+    box-shadow: 0 0 10px #646360;
+}
+
+.button-one:active {
+    background-color: #fade4b;
+    box-shadow: 0 5px #95a5a6;
+    transform: translateY(4px);
+}
+
+/* -----------------------------------------------------
+	Dropdown
+-------------------------------------------------------- */  
+.custom-dropdown,
+.custom-dropdown * {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+}
+.custom-dropdown {
+	position: relative;
+	background-color: #E6E6E6;
+	border-radius: 4px;
+}
+.custom-dropdown .custom-select {
+	font-size: 1rem;
+	font-weight: normal;
+	max-width: 100%;
+	padding: 8px 24px 8px 10px;
+    border:1px solid gray;
+    border-radius: 6px;
+	background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	appearance: none;
+}
+.custom-dropdown .custom-select:active, .custom-dropdown .custom-select:focus {
+	outline: none;
+    box-shadow: 0 0 10px #646360;
+}
+.custom-dropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 0;
+	height: 0;
+	margin-top: -2px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
+.custom-select {
+    width: 80px;
+    height: 35px;
+    text-align: center;
+}
+
+/* -----------------------------------------------------
+	Form
+-------------------------------------------------------- */
+.custom-form {
+    width: 100%;
+    background-color: white;
+    margin: 50px 0;
+}
+
+.custom-delete {
+    width: 100%;
+    background-color: white;
+    margin: 50px 0;
+    border: 2px solid #333333;
+    border-radius: 1rem;
+}
+
+.custom-title {
+    padding: 40px;
+    border-bottom: 3px solid black;
+    text-align: center;
+    font-size: 24px;
+}
+
+.custom-question {
+    padding: 40px;
+    border-bottom: 0.5px solid black;
+    text-align: center;
+    font-size: 24px;
+}
+
+.col-main {
+    flex: 1;  
+}  
+
+.col-complementary {
+    flex: 1;  
+}
+
+@media only screen and (min-width: 640px) {
+    .form-layout {
+        display: flex;
+    }
+}
+
+.form-container {
+    max-width: 60em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col {
+    padding: 1em;
+    margin: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------------------------------------------
+	Three dots
+-------------------------------------------------------- */
+.actions {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: radial-gradient(circle, #333333 4px, transparent 1px);
+    background-size: 100% 33.33%;
+    border: none;
+    color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.actions:hover {
+    cursor: pointer;
+    background-color: #f4f6f9;
+}
